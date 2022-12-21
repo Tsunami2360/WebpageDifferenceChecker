@@ -19,6 +19,25 @@ function check() {
     fetch("https://www.your-tickets.be/events/BoitetheFuck")
     .then(res => res.text())
     .then(data => {
+      /* GET DIFFERENCE
+      function getDifference(a, b)
+      {
+          var i = 0;
+          var j = 0;
+          var result = "";
+  
+          while (j < b.length)
+          {
+           if (a[i] != b[j] || i == a.length)
+               result += b[j];
+           else
+               i++;
+           j++;
+          }
+          return result;
+      }
+      console.log(getDifference(data, fs.readFileSync("./data", {encoding: "utf8"})));*/
+      
       if(data === fs.readFileSync("./data", {encoding: "utf8"})) {
         console.log(`${i}. ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()} same`);
         i++;
