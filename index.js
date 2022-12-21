@@ -55,4 +55,4 @@ function check() {
     });
   }, 15000);
 }
-setTimeout(() => check(), 15000)
+setTimeout(() => check(), 15000);
